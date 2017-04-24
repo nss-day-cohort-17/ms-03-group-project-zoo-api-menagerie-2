@@ -9,19 +9,25 @@ module.exports.getAnimal = ({ params: { id } }, res, next) => {
 }
 
 module.exports.getAnimals = (req, res, next) => {
-  Animal.fetchAll()
+  Animal.getAllAnimals()
   .then(animals => res.status(200).json(animals))
   .catch(err => next(err))
 }
 
-// module.exports.getAnimalTricks = ({ params: { id }}, res, next) => {
-//   Animal.
-// }
+module.exports.getAnimalTricks = ({ params: { id }}, res, next) => {
+  Animal.getAnimalTricks()
+  .then(tricks => res.status(200).json(tricks))
+  .catch(err => next(err))
+}
 
-// module.exports.getAnimalTrainers = ({ params: { id }}, res, next) => {
-//   Animal.
-// }
+module.exports.getAnimalTrainers = ({ params: { id }}, res, next) => {
+  Animal.getAnimalTrainers()
+  .then(trainers => res.status(200).json(trainers))
+  .catch(err => next(err))
+}
 
-// module.exports.getAnimalKeepers = ({ params: { id }}, res, next) => {
-//   Animal.
-// }
+module.exports.getAnimalKeepers = ({ params: { id }}, res, next) => {
+  Animal.getAnimalKeepers()
+  .then(keepers => res.status(200).json(keepers))
+  .catch(err => next(err))
+}

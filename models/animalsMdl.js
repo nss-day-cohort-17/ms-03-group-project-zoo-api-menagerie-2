@@ -7,8 +7,8 @@ require('./typesMdl')
 
 const Animal = bookshelf.Model.extend({
   tableName: 'animals',
-  tricks: function(){ return this.hasMany('Tricks')},
-  types: function() { return this.belongsTo('Type').through('Type_Id')}
+  tricks: function(){ return this.belongsToMany('Trick')},
+  types: function() { return this.belongsTo('Type')}
 }, {
   getAllAnimals: function() {
     console.log("Get all called from Animal model");
@@ -23,6 +23,16 @@ const Animal = bookshelf.Model.extend({
     .then(show => show)
     .catch(err => err)
   }
+  // getAnimalTricks: function() {
+  //   return this.forge({id})
+  //   .fetch()
+  // },
+  // getAnimalTrainers: function() {
+
+  // },
+  // getAnimalKeepers: function() {
+
+  // }
 })
 
 module.exports = bookshelf.model('Animal', Animal)
