@@ -4,6 +4,7 @@
   "description": "The Menagerie Zoo is currently undergoing expansion and is in need of an API to assist their front end devs. The API should provide information about the animals, their keepers, their trainers, and their respective tricks.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon bin/menagerie-zoo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
     "bookshelf": "^0.10.3",
     "express": "^4.15.2",
     "knex": "^0.12.9",
+    "morgan": "^1.8.1",
     "pg": "^6.1.5"
   },
   "devDependencies": {
