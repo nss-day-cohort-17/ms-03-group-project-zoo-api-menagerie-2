@@ -1,5 +1,5 @@
-# Minagerie Zoo
-The Minagerie Zoo is currently undergoing expansion and is in need of an API to assist their front end devs. The API should provide information about the animals, their keepers, their trainers, and their respective tricks.
+# Menagerie Zoo
+The Menagerie Zoo is currently undergoing expansion and is in need of an API to assist their front end devs. The API should provide information about the animals, their keepers, their trainers, and their respective tricks.
 
 # About
 This project uses test driven development(TDD) along with Knex and Bookshelf ORMs to work with the a Postgresql database. The project is deployed through Heroku to give other devs access to the data.
