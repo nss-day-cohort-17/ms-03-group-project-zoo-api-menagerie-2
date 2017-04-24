@@ -22,7 +22,6 @@ You'll need to knock the rust off of your Angular Fu for this one! For this proj
 https://github.com/C-Stein/mean-mongoose-zoo
 
 ### Requirements
-+ An ERD
 + TDD for each route
 + Knex and Bookshelf to build your schemas and models
 + Research and understand CORS and how to allow cross origin requests, then implement this npm package
