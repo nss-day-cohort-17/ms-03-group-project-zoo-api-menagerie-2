@@ -1,17 +1,17 @@
 # Menagerie Zoo
 The Menagerie Zoo is currently undergoing expansion and is in need of an API to assist their front end devs. The API should provide information about the animals, their keepers, their trainers, and their respective tricks.
 
-# About
+## About
 This project uses test driven development(TDD) along with Knex and Bookshelf ORMs to work with the a Postgresql database. The project is deployed through Heroku to give other devs access to the data.
 
-# Tech used
+## Tech used
 <img src="images/postgres.png" alt="postgres" width="200px">
 <img src="images/bookshelf-icon.png" alt="bookshelf" width="200px">
 <img src="images/knex.png" alt="knex" width="200px">
 <img src="images/express.png" alt="express" width="200px">
 
 
-# ERD
+## ERD
 <img src="images/menagerie-erd.png">
 
 
