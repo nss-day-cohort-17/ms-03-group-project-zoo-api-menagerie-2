@@ -1,0 +1,30 @@
+{
+  "name": "ms-03-group-project-zoo-api-menagerie-2",
+  "version": "1.0.0",
+  "description": "The Menagerie Zoo is currently undergoing expansion and is in need of an API to assist their front end devs. The API should provide information about the animals, their keepers, their trainers, and their respective tricks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nss-day-cohort-17/ms-03-group-project-zoo-api-menagerie-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nss-day-cohort-17/ms-03-group-project-zoo-api-menagerie-2/issues"
+  },
+  "homepage": "https://github.com/nss-day-cohort-17/ms-03-group-project-zoo-api-menagerie-2#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bookshelf": "^0.10.3",
+    "express": "^4.15.2",
+    "knex": "^0.12.9",
+    "pg": "^6.1.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
