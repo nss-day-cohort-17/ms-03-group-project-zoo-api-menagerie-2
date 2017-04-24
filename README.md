@@ -5,7 +5,10 @@ The Menagerie Zoo is currently undergoing expansion and is in need of an API to 
 This project uses test driven development(TDD) along with Knex and Bookshelf ORMs to work with the a Postgresql database. The project is deployed through Heroku to give other devs access to the data.
 
 # Tech used
-<img src="images/postgres.png" alt="postgres" width="200px"><img src="images/bookshelf-icon.png" alt="bookshelf" width="200px"><img src="images/knex.png" alt="knex" width="200px"><img src="images/express.png" alt="express" width="200px">
+<img src="images/postgres.png" alt="postgres" width="200px">
+<img src="images/bookshelf-icon.png" alt="bookshelf" width="200px">
+<img src="images/knex.png" alt="knex" width="200px">
+<img src="images/express.png" alt="express" width="200px">
 
 
 # ERD
