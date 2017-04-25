@@ -1,6 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('tricks', (table) => {
+  .createTable('tricks', (table) => {
     table.increments();
     table.string('name');
   })
@@ -28,7 +29,7 @@ exports.up = function(knex, Promise) {
   })
   .createTable('trainers', (table) => {
     table.increments();
-    table.string('name').notNullable().unique();
+    table.string('name').notNullable();
     table.integer('age').notNullable();
     table.string('gender').notNullable();
     table.string('bio').notNullable();

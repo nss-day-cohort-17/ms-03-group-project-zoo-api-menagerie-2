@@ -4,7 +4,8 @@
   "description": "The Menagerie Zoo is currently undergoing expansion and is in need of an API to assist their front end devs. The API should provide information about the animals, their keepers, their trainers, and their respective tricks.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon bin/menagerie-zoo",
+    "test": "nodemon --exec \"mocha --recursive\" -R list"
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,15 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "bookshelf": "^0.10.3",
+    "chai-http": "^2.0.1",
     "express": "^4.15.2",
     "knex": "^0.12.9",
+    "morgan": "^1.8.1",
     "pg": "^6.1.5"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
     "mocha": "^2.4.5"
   }
 }
