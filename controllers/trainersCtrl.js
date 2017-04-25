@@ -1,9 +1,10 @@
 'use strict'
 
-const Trainer = require('../models/TrainersMdl')
+const Trainer = require('../models/trainersMdl')
 
 module.exports.getTrainer = ({ params: { id } }, res, next) => {
-  Trainer.getSingleTrainer(id)
+  Trainer.forge({ id })
+    .fetch({ withRelated: ['type', 'trick'], require: true })
   .then(Trainer => res.status(200).json(Trainer))
   .catch(err => next(err))
 }

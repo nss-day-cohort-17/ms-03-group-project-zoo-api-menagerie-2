@@ -1,9 +1,12 @@
 'use strict'
 
-const { bookshelf } = require('../db/database');
+const { bookshelf } = require('../db/database')
+require('./animalsMdl')
 
 const Type = bookshelf.Model.extend({
-  tableName: 'types'
+  tableName: 'types',
+  animal: function() { return this.hasMany('Animal')},
+  trainer: function() { return this.hasMany('Trainer')}
 }, {
   getAllTypes: function() {
     console.log("Get all called from Type model");
@@ -20,4 +23,4 @@ const Type = bookshelf.Model.extend({
   }
 })
 
-module.exports = Type
+module.exports = bookshelf.model('Type', Type)

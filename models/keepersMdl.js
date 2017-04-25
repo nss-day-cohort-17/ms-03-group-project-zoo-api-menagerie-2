@@ -1,13 +1,11 @@
 'use strict'
 
 const { bookshelf } = require('../db/database');
-require('./tricksMdl')
-require('./trainersMdl')
-require('./typesMdl')
 
 const Keeper = bookshelf.Model.extend({
   tableName: 'keepers',
-  animals: function(){ return this.belongsTo('Animal')},
+  type: function(){ return this.belongsTo('Type')},
+  animal: function(){ return this.belongsTo('Animal')},
 }, {
   getAllKeepers: function() {
     console.log("Get all called from Keeper model");
@@ -15,12 +13,6 @@ const Keeper = bookshelf.Model.extend({
     .fetchAll()
     .then(rows => rows)
     .catch(error => error)
-  },
-  getSingleKeeper: function(id) {
-    return this.forge({id})
-    .fetch()
-    .then(show => show)
-    .catch(err => err)
   }
 })
 
