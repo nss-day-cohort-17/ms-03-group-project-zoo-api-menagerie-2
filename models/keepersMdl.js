@@ -24,4 +24,4 @@ const Keeper = bookshelf.Model.extend({
   }
 })
 
-module.exports = bookshelf.model('Keeper', Keeper)
+module.exports = Keeper

@@ -2,6 +2,7 @@
 
 const { bookshelf } = require('../db/database');
 
+
 const Trick = bookshelf.Model.extend({
   tableName: 'tricks'
 }, {
@@ -20,4 +21,4 @@ const Trick = bookshelf.Model.extend({
   }
 })
 
-module.exports = bookshelf.model('Trick', Trick)
+module.exports = Trick

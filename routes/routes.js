@@ -17,21 +17,21 @@ router.get('/animals/:id/keepers', getAnimalKeepers);
 
 router.get('/keepers', getKeepers);
 router.get('/keepers/:id', getKeeper);
-router.get('/keepers/:id/animals', getKeepersAnimals);
+// router.get('/keepers/:id/animals', getKeepersAnimals);
 
 router.get('/trainers', getTrainers);
 router.get('/trainers/:id', getTrainer);
-router.get('/trainers/:id/animals', getTrainerAnimals);
-router.get('/trainers/:id/tricks', getTrainerTricks);
+// router.get('/trainers/:id/animals', getTrainerAnimals);
+// router.get('/trainers/:id/tricks', getTrainerTricks);
 
 router.get('/tricks', getTricks);
 router.get('/tricks/:id', getTrick);
-router.get('/tricks/:id/animals', getTrickAnimals);
-router.get('/tricks/:id/trainers', getTrickTrainers);
+// router.get('/tricks/:id/animals', getTrickAnimals);
+// router.get('/tricks/:id/trainers', getTrickTrainers);
 
 router.get('/types', getTypes);
-router.get('/types/:id', getTypeId);
-router.get('/types/:id/animals', getTypeAnimals);
-router.get('/types/:id/trainers', getTypeTrainers);
+// router.get('/types/:id', getTypeId);
+// router.get('/types/:id/animals', getTypeAnimals);
+// router.get('/types/:id/trainers', getTypeTrainers);
 
 module.exports = router;
