@@ -6,7 +6,7 @@ require('./animalsMdl')
 
 const Trick = bookshelf.Model.extend({
   tableName: 'tricks',
-  animal: function() { return this.belongsToMany(Animal)}
+  animal: function() { return this.hasMany('Animal')}
 }, {
   getAllTricks: function() {
     console.log("Get all called from Trick model");
@@ -23,4 +23,4 @@ const Trick = bookshelf.Model.extend({
   }
 })
 
-module.exports = Trick
+module.exports = bookshelf.model('Trick', Trick)
