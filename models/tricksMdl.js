@@ -1,10 +1,12 @@
 'use strict'
 
 const { bookshelf } = require('../db/database');
+require('./animalsMdl')
 
 
 const Trick = bookshelf.Model.extend({
-  tableName: 'tricks'
+  tableName: 'tricks',
+  animal: function() { return this.belongsToMany(Animal)}
 }, {
   getAllTricks: function() {
     console.log("Get all called from Trick model");
