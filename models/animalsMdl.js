@@ -1,17 +1,16 @@
 'use strict'
 
-const { bookshelf } = require('../db/database');
-require('./keepersMdl')
-require('./trainersMdl')
+const { bookshelf } = require('../db/database')
+require('./tricksMdl')
 require('./typesMdl')
 
 const Animal = bookshelf.Model.extend({
   tableName: 'animals',
-  tricks: function(){ return this.belongsToMany('Trick')},
+  tricks: function() { return this.belongsTo('Trick')},
   types: function() { return this.belongsTo('Type')}
 }, {
   getAllAnimals: function() {
-    console.log("Get all called from Animal model");
+    console.log("Get all called from Animal model")
     return this.forge()
     .fetchAll()
     .then(rows => rows)
@@ -23,10 +22,6 @@ const Animal = bookshelf.Model.extend({
     .then(show => show)
     .catch(err => err)
   }
-  // getAnimalTricks: function() {
-  //   return this.forge({id})
-  //   .fetch()
-  // },
   // getAnimalTrainers: function() {
 
   // },
@@ -35,4 +30,4 @@ const Animal = bookshelf.Model.extend({
   // }
 })
 
-module.exports = Animal
+module.exports = bookshelf.model('Animal', Animal)

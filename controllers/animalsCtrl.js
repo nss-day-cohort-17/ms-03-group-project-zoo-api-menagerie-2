@@ -15,7 +15,8 @@ module.exports.getAnimals = (req, res, next) => {
 }
 
 module.exports.getAnimalTricks = ({ params: { id }}, res, next) => {
-  Animal.getAnimalTricks()
+  Animal.forge({id})
+  .fetch({ withRelated: ['tricks'], require: true })
   .then(tricks => res.status(200).json(tricks))
   .catch(err => next(err))
 }

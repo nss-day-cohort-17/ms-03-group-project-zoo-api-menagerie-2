@@ -1,6 +1,6 @@
 'use strict'
 
-const Trick = require('../models/TricksMdl')
+const Trick = require('../models/tricksMdl')
 
 module.exports.getTrick = ({ params: { id } }, res, next) => {
   Trick.getSingleTrick(id)
