@@ -30,15 +30,13 @@ describe('testing Zoo routes:', () => {
         res.should.have.status(200);
         res.should.be.json
         res.body.should.be.a('array');
-        res.body[27].should.have.property('name');
-        res.body[27].name.should.equal('Kelsy Cham');
       });
     });
   });
 
 // trainers/id
   describe('"/api/v1/trainers/1"', () => {
-    it('should one trainer of id 1', () => {
+    it('should get one trainer of id 1', () => {
       return chai.request(server)
       .get('/api/v1/trainers/1')
       .then( (res) => {
@@ -46,7 +44,11 @@ describe('testing Zoo routes:', () => {
         res.should.be.json
         res.body.should.be.a('object');
         res.body.should.have.property('name');
+        res.body.should.have.property('age');
+        res.body.should.have.property('bio');
         res.body.name.should.equal('Loren Thaim');
+        res.body.age.should.equal(42);
+        res.body.bio.should.equal('Reverse-engineered exuding toolset');
       });
     });
   });
@@ -55,6 +57,21 @@ describe('testing Zoo routes:', () => {
 // trainers/id/tricks
 
 // animals
+  describe('"/api/v1/animals"', () => {
+    it('should get all animals', () => {
+      return chai.request(server)
+      .get('/api/v1/animals')
+      .then( (res) => {
+        res.should.have.status(200);
+        res.should.be.json
+        res.body.should.be.a('array');
+        res.body[0].should.have.property('name');
+        res.body[0].should.have.property('species');
+        res.body[0].name.should.equal('Wallas');
+        res.body[0].species.should.equal('ferret');
+      });
+    });
+  });
 // animals/id
 // animals/id/trainers
 // animals/id/keepers
