@@ -23,4 +23,4 @@ const Trainer = bookshelf.Model.extend({
   }
 })
 
-module.exports = bookshelf.model('Trainer', Trainer)
+module.exports = Trainer

@@ -35,4 +35,4 @@ const Animal = bookshelf.Model.extend({
   // }
 })
 
-module.exports = bookshelf.model('Animal', Animal)
+module.exports = Animal

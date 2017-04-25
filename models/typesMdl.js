@@ -20,4 +20,4 @@ const Type = bookshelf.Model.extend({
   }
 })
 
-module.exports = bookshelf.model('Type', Type)
+module.exports = Type
