@@ -1,7 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema
-  .createTable('tricks', (table) => {
+  return knex.schema.createTable('tricks', (table) => {
     table.increments();
     table.string('name');
   })
@@ -16,7 +15,6 @@ exports.up = function(knex, Promise) {
     table.string('gender').notNullable();
     table.string('species').notNullable();
     table.string('img').notNullable();
-    table.integer('trick_id').unsigned().references('tricks.id');
     table.integer('type_id').unsigned().references('types.id');
   })
   .createTable('keepers', (table) => {
@@ -27,7 +25,6 @@ exports.up = function(knex, Promise) {
     table.string('bio').notNullable();
     table.string('img').notNullable();
     table.string('shift').notNullable();
-    table.integer('animal_id').unsigned().references('animals.id');
   })
   .createTable('trainers', (table) => {
     table.increments();
@@ -36,13 +33,35 @@ exports.up = function(knex, Promise) {
     table.string('gender').notNullable();
     table.string('bio').notNullable();
     table.string('img').notNullable();
+  })
+  .createTable('animals_tricks', (table) => {
+    table.increments();
+    table.integer('animal_id').unsigned().references('animals.id');
     table.integer('trick_id').unsigned().references('tricks.id');
+  })
+  .createTable('trainers_tricks', (table) => {
+    table.increments();
+    table.integer('trainer_id').unsigned().references('trainers.id');
+    table.integer('trick_id').unsigned().references('tricks.id');
+  })
+  .createTable('trainers_types', (table) => {
+    table.increments();
+    table.integer('trainer_id').unsigned().references('trainers.id');
     table.integer('type_id').unsigned().references('types.id');
+  })
+  .createTable('keepers_animals', (table) => {
+    table.increments();
+    table.integer('keeper_id').unsigned().references('keepers.id');
+    table.integer('animal_id').unsigned().references('animals.id');
   })
 };
 
 exports.down = (knex, Promise) =>
   knex.schema
+  .dropTable('keepers_animals')
+  .dropTable('trainers_types')
+  .dropTable('trainers_tricks')
+  .dropTable('animals_tricks')
   .dropTable('trainers')
   .dropTable('keepers')
   .dropTable('animals')
