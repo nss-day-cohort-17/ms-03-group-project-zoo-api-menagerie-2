@@ -1,6 +1,6 @@
 'use strict'
 
-const Type = require('../models/TypesMdl')
+const Type = require('../models/typesMdl')
 
 module.exports.getType = ({ params: { id } }, res, next) => {
   Type.getSingleType(id)

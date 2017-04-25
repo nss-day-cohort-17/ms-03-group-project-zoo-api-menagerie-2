@@ -2,11 +2,10 @@
 
 const { bookshelf } = require('../db/database');
 
-
 const Trainer = bookshelf.Model.extend({
   tableName: 'trainers',
-  tricks: function(){ return this.belongsToMany('Trick')},
-  types: function() { return this.belongsTo('Type')}
+  trick: function(){ return this.belongsTo('Trick')},
+  type: function() { return this.belongsTo('Type')}
 }, {
   getAllTrainers: function() {
     console.log("Get all called from Trainer model");

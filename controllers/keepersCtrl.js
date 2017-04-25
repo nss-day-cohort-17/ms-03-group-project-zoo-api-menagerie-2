@@ -1,9 +1,10 @@
 'use strict'
 
-const Keeper = require('../models/KeepersMdl')
+const Keeper = require('../models/keepersMdl')
 
 module.exports.getKeeper = ({ params: { id } }, res, next) => {
-  Keeper.getSingleKeeper(id)
+  Keeper.forge({ id })
+    .fetch({ withRelated: ['animal'], require: true })
   .then(Keeper => res.status(200).json(Keeper))
   .catch(err => next(err))
 }
