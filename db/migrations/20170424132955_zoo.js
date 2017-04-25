@@ -30,7 +30,7 @@ exports.up = function(knex, Promise) {
   })
   .createTable('trainers', (table) => {
     table.increments();
-    table.string('name').notNullable().unique();
+    table.string('name').notNullable();
     table.integer('age').notNullable();
     table.string('gender').notNullable();
     table.string('bio').notNullable();
