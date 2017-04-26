@@ -223,5 +223,230 @@
         "bio": "Ergonomic executive infrastructure",
         "img": "https://randomuser.me/api/portraits/men/11.jpg",
         "shift": "Fri-Sun"
+    },
+    {
+        "id": 1,
+        "name": "Hunt Eckhard",
+        "age": 37,
+        "gender": "Male",
+        "bio": "Horizontal 24 hour product",
+        "img": "https://randomuser.me/api/portraits/men/1.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 2,
+        "name": "Wallis Boshier",
+        "age": 56,
+        "gender": "Female",
+        "bio": "Team-oriented non-volatile encoding",
+        "img": "https://randomuser.me/api/portraits/women/26.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 3,
+        "name": "Teador Antoons",
+        "age": 48,
+        "gender": "Male",
+        "bio": "Upgradable hybrid architecture",
+        "img": "https://randomuser.me/api/portraits/men/2.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 4,
+        "name": "Barrie Proske",
+        "age": 62,
+        "gender": "Male",
+        "bio": "Organic system-worthy project",
+        "img": "https://randomuser.me/api/portraits/men/3.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 5,
+        "name": "Ferdinanda Camoletto",
+        "age": 65,
+        "gender": "Female",
+        "bio": "Vision-oriented systematic extranet",
+        "img": "https://randomuser.me/api/portraits/women/89.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 6,
+        "name": "Devinne Arnely",
+        "age": 39,
+        "gender": "Female",
+        "bio": "Profit-focused optimizing matrices",
+        "img": "https://randomuser.me/api/portraits/women/0.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 7,
+        "name": "Waldo Mackriell",
+        "age": 60,
+        "gender": "Male",
+        "bio": "Ergonomic solution-oriented projection",
+        "img": "https://randomuser.me/api/portraits/men/4.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 8,
+        "name": "Fairleigh Southward",
+        "age": 58,
+        "gender": "Male",
+        "bio": "Adaptive bottom-line concept",
+        "img": "https://randomuser.me/api/portraits/men/5.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 9,
+        "name": "Alana Pettet",
+        "age": 25,
+        "gender": "Female",
+        "bio": "Virtual contextually-based superstructure",
+        "img": "https://randomuser.me/api/portraits/women/1.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 10,
+        "name": "Leanna Zapatero",
+        "age": 27,
+        "gender": "Female",
+        "bio": "Up-sized dedicated extranet",
+        "img": "https://randomuser.me/api/portraits/women/2.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 11,
+        "name": "Kailey Merlin",
+        "age": 52,
+        "gender": "Female",
+        "bio": "Phased reciprocal framework",
+        "img": "https://randomuser.me/api/portraits/women/3.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 12,
+        "name": "Joseph Phateplace",
+        "age": 41,
+        "gender": "Male",
+        "bio": "Digitized needs-based application",
+        "img": "https://randomuser.me/api/portraits/men/6.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 13,
+        "name": "Chad Kuhndel",
+        "age": 50,
+        "gender": "Female",
+        "bio": "Seamless discrete system engine",
+        "img": "https://randomuser.me/api/portraits/women/4.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 14,
+        "name": "Corina Elders",
+        "age": 60,
+        "gender": "Female",
+        "bio": "Inverse empowering moratorium",
+        "img": "https://randomuser.me/api/portraits/women/5.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 15,
+        "name": "Annalise Hambelton",
+        "age": 55,
+        "gender": "Female",
+        "bio": "Programmable system-worthy standardization",
+        "img": "https://randomuser.me/api6/portraits/women/12.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 16,
+        "name": "Olivie Pomphrett",
+        "age": 27,
+        "gender": "Female",
+        "bio": "Decentralized client-driven service-desk",
+        "img": "https://randomuser.me/api/portraits/women/7.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 17,
+        "name": "Jaime Oldrey",
+        "age": 27,
+        "gender": "Female",
+        "bio": "Extended even-keeled Graphical User Interface",
+        "img": "https://randomuser.me/api/portraits/women/8.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 18,
+        "name": "Corette Chatterton",
+        "age": 51,
+        "gender": "Female",
+        "bio": "Optional uniform structure",
+        "img": "https://randomuser.me/api/portraits/women/9.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 19,
+        "name": "Tatiania Leabeater",
+        "age": 44,
+        "gender": "Female",
+        "bio": "Down-sized object-oriented moderator",
+        "img": "https://randomuser.me/api/portraits/women/10.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 20,
+        "name": "Rafi Stentiford",
+        "age": 45,
+        "gender": "Male",
+        "bio": "Digitized multi-tasking open system",
+        "img": "https://randomuser.me/api/portraits/men/7.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 21,
+        "name": "Abbot Blaszczak",
+        "age": 54,
+        "gender": "Male",
+        "bio": "Networked actuating success",
+        "img": "https://randomuser.me/api/portraits/men/8.jpg",
+        "shift": "Fri-Sun"
+    },
+    {
+        "id": 22,
+        "name": "Melly Dike",
+        "age": 61,
+        "gender": "Female",
+        "bio": "Open-source optimizing initiative",
+        "img": "https://randomuser.me/api/portraits/women/11.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 23,
+        "name": "Jamison Winchurch",
+        "age": 26,
+        "gender": "Male",
+        "bio": "Enhanced contextually-based open system",
+        "img": "https://randomuser.me/api/portraits/men/9.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 24,
+        "name": "Carlo Klimshuk",
+        "age": 40,
+        "gender": "Male",
+        "bio": "Organic intermediate productivity",
+        "img": "https://randomuser.me/api/portraits/men/10.jpg",
+        "shift": "Mon-Thu"
+    },
+    {
+        "id": 25,
+        "name": "Cash Haydon",
+        "age": 28,
+        "gender": "Male",
+        "bio": "Ergonomic executive infrastructure",
+        "img": "https://randomuser.me/api/portraits/men/11.jpg",
+        "shift": "Fri-Sun"
     }
 ]
