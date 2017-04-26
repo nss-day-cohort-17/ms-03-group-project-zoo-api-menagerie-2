@@ -4,7 +4,7 @@ const { Router } = require('express')
 const router = Router()
 
 const { getAnimals, getAnimal, addAnimal, removeAnimal, updateAnimal } = require('../controllers/animalsCtrl')
-const { getKeepers, getKeeper } = require('../controllers/keepersCtrl')
+const { getKeepers, getKeeper, addKeeper, removeKeeper, updateKeeper } = require('../controllers/keepersCtrl')
 const { getTrainers, getTrainer } = require('../controllers/trainersCtrl')
 const { getTrick, getTricks } = require('../controllers/tricksCtrl')
 const { getTypes, getType } = require('../controllers/typesCtrl')
@@ -17,6 +17,9 @@ router.patch('/animals/update', updateAnimal)
 
 router.get('/keepers', getKeepers)
 router.get('/keepers/:id', getKeeper)
+router.post('/keepers/new', addKeeper)
+router.delete('/keepers/:id', removeKeeper)
+router.patch('/keepers/update', updateKeeper)
 
 router.get('/trainers', getTrainers)
 router.get('/trainers/:id', getTrainer)
