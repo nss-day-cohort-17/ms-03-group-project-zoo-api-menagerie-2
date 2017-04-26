@@ -13,7 +13,7 @@ This project uses test driven development(TDD) along with Knex and Bookshelf ORM
 
 
 ## ERD
-<img src="images/menagerie-erd.png">
+<img src="images/erd2.png">
 
 
 # express-api-group-project
