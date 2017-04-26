@@ -4,7 +4,7 @@ const { knex } = require('../../../db/database');
 const keeperData = require('./keepers')
 
 let keeperPromise = keeperData.map((keeper) => {
-  return knex('keepers').insert({name:keeper.name, age:keeper.age, gender:keeper.gender, bio:keeper.bio, img:keeper.img, shift:keeper.shift, animal_id:keeper.animal_id})
+  return knex('keepers').insert({name:keeper.name, age:keeper.age, gender:keeper.gender, bio:keeper.bio, img:keeper.img, shift:keeper.shift})
 })
 
 exports.seed = function(knex, Promise) {
