@@ -2,11 +2,12 @@
 
 const { bookshelf } = require('../db/database')
 require('./animalsMdl')
+require('./trainersTypesMdl')
 
 const Type = bookshelf.Model.extend({
   tableName: 'types',
   animal: function() { return this.hasMany('Animal')},
-  trainer: function() { return this.hasMany('Trainer')}
+  trainer: function() { return this.belongsToMany('Trainer').through('Trainers_Types')}
 }, {
   getAllTypes: function() {
     console.log("Get all called from Type model");

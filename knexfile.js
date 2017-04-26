@@ -14,7 +14,7 @@ module.exports = {
   },
   development: {
     client: 'pg',
-    debug: true,
+    debug: false,
     connection: 'postgres://localhost/zoo',
     migrations: {
       directory: __dirname + '/db/migrations'
