@@ -35,23 +35,23 @@ describe('testing Zoo routes:', () => {
   });
 
 // trainers/id
-  describe('"/api/v1/trainers/1"', () => {
-    it('should get one trainer of id 1', () => {
-      return chai.request(server)
-      .get('/api/v1/trainers/1')
-      .then( (res) => {
-        res.should.have.status(200);
-        res.should.be.json
-        res.body.should.be.a('object');
-        res.body.should.have.property('name');
-        res.body.should.have.property('age');
-        res.body.should.have.property('bio');
-        res.body.name.should.equal('Loren Thaim');
-        res.body.age.should.equal(42);
-        res.body.bio.should.equal('Reverse-engineered exuding toolset');
-      });
-    });
-  });
+  // describe('"/api/v1/trainers/1"', () => {
+  //   it('should get one trainer of id 1', () => {
+  //     return chai.request(server)
+  //     .get('/api/v1/trainers/1')
+  //     .then( (res) => {
+  //       res.should.have.status(200);
+  //       res.should.be.json
+  //       res.body.should.be.a('object');
+  //       res.body.should.have.property('name');
+  //       res.body.should.have.property('age');
+  //       res.body.should.have.property('bio');
+  //       res.body.name.should.equal('Loren Thaim');
+  //       res.body.age.should.equal(42);
+  //       res.body.bio.should.equal('Reverse-engineered exuding toolset');
+  //     });
+  //   });
+  // });
 
 // trainers/id/animals
 // trainers/id/tricks
@@ -77,19 +77,52 @@ describe('testing Zoo routes:', () => {
 // animals/id/keepers
 
 // keepers
+  describe('"/api/v1/keepers', () => {
+    it('should get all keepers', () => {
+      return chai.request(server)
+      .get('/api/v1/keepers')
+      .then( (res) => {
+        res.should.have.status(200);
+        res.should.be.json
+        res.body.should.be.a('array')
+      })
+    })
+  })
+
 // keepers/id
 // keepers/id/animals
 
 // tricks
+  describe('"/api/v1/tricks', () => {
+    it('should get all tricks', () => {
+      return chai.request(server)
+      .get('/api/v1/tricks')
+      .then( (res) => {
+        res.should.have.status(200);
+        res.should.be.json
+        res.body.should.be.a('array')
+      })
+    })
+  })
 // tricks/id
 // tricks/id/animals
 // tricks/id/trainers
 
 // types
+  describe('"/api/v1/types', () => {
+    it('should get all types', () => {
+      return chai.request(server)
+      .get('/api/v1/types')
+      .then( (res) => {
+        res.should.have.status(200);
+        res.should.be.json
+        res.body.should.be.a('array')
+      })
+    })
+  })
 // types/id
 // types/id/animals
 // types/id/trainers
-
 
 
 })
