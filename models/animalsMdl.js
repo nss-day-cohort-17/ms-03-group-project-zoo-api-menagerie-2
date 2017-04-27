@@ -4,6 +4,7 @@ const { bookshelf } = require('../db/database')
 
 require('./tricksMdl')
 require('./typesMdl')
+require('./keepersMdl')
 require('./animalsTricksMdl')
 require('./keepersAnimalsMdl')
 

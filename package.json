@@ -4,7 +4,7 @@
   "description": "The Menagerie Zoo is currently undergoing expansion and is in need of an API to assist their front end devs. The API should provide information about the animals, their keepers, their trainers, and their respective tricks.",
   "main": "index.js",
   "scripts": {
-    "start": "node bin/menagerie-zoo",
+    "start": "nodemon bin/menagerie-zoo",
     "test": "nodemon --exec \"mocha --recursive\" -R list"
   },
   "engines": {

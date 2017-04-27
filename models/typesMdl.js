@@ -2,6 +2,7 @@
 
 const { bookshelf } = require('../db/database')
 require('./animalsMdl')
+require('./trainersMdl')
 require('./trainersTypesMdl')
 
 const Type = bookshelf.Model.extend({

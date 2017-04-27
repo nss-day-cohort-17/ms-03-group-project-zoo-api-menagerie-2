@@ -1,6 +1,8 @@
 'use strict'
 
 const Animal = require('../models/animalsMdl')
+const AnimalTrick = require('../models/animalsTricksMdl')
+const AnimalsKeeper = require('../models/keepersAnimalsMdl')
 
 module.exports.getAnimal = ({ params: { id } }, res, next) => {
   Animal.forge({ id })
@@ -23,8 +25,12 @@ module.exports.addAnimal = ({ body }, res, next) => {
 }
 
 module.exports.removeAnimal = ({ params: { id } }, res, next) => {
-  Animal.forge({ id })
+  // tricks and keepers throught the join table
+  AnimalTrick.forge()
+    .where({ animal_id: id })
     .destroy()
+    .then(() => AnimalsKeeper.forge().where({ animal_id: id }).destroy())
+    .then(() => Animal.forge({ id }).destroy())
     .then(() => res.status(202).json({ 'msg': 'animal removed' }))
     .catch(err => next(err))
 }

@@ -1,6 +1,7 @@
 'use strict'
 
 const Keeper = require('../models/keepersMdl')
+const AnimalsKeeper = require('../models/keepersAnimalsMdl')
 
 module.exports.getKeeper = ({ params: { id } }, res, next) => {
   Keeper.forge({ id })
@@ -23,8 +24,10 @@ module.exports.addKeeper = ({ body }, res, next) => {
 }
 
 module.exports.removeKeeper = ({ params: { id } }, res, next) => {
-  Keeper.removeKeeper(id)
-    .then(() => res.status(202).json({ "msg": 'Keeper has been removed' }))
+  // animals through the join table
+  AnimalsKeeper.forge().where({ keeper_id: id }).destroy()
+    .then(() => Keeper.forge({ id }).destroy())
+    .then(() => res.status(202).json({ 'msg': 'keeper removed' }))
     .catch(err => next(err))
 }
 

@@ -5,15 +5,15 @@ require('./trainersMdl')
 require('./typesMdl')
 
 const Trainers_Types = bookshelf.Model.extend({
-  tableName: 'trainers_types',
-  trainers: function() {
-    return this.belongsTo('Trainer')
-  },
-  types: function() {
-    return this.belongsTo('Type')
-  }
+  tableName: 'trainers_types'
+  // trainers: function() {
+  //   return this.belongsTo('Trainer')
+  // },
+  // types: function() {
+  //   return this.belongsTo('Type')
+  // }
 }, {
-  dependents: ['trainers', 'types']
+  // dependents: ['trainers', 'types']
 })
 
 module.exports = bookshelf.model('Trainers_Types', Trainers_Types)

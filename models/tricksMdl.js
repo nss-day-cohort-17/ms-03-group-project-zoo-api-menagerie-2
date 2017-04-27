@@ -2,6 +2,7 @@
 
 const { bookshelf } = require('../db/database');
 require('./animalsMdl')
+require('./trainersMdl')
 require('./animalsTricksMdl')
 require('./trainersTricksMdl')
 
