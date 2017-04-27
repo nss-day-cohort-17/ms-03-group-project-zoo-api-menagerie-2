@@ -1,6 +1,7 @@
 'use strict'
 
 const { bookshelf } = require('../db/database')
+
 require('./tricksMdl')
 require('./typesMdl')
 require('./animalsTricksMdl')
@@ -19,6 +20,8 @@ const Animal = bookshelf.Model.extend({
     .then(rows => rows)
     .catch(error => error)
   }
+}, {
+  dependents: ['trick', 'type', 'keeper']
 })
 
 module.exports = bookshelf.model('Animal', Animal)

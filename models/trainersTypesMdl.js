@@ -12,6 +12,8 @@ const Trainers_Types = bookshelf.Model.extend({
   types: function() {
     return this.belongsTo('Type')
   }
+}, {
+  dependents: ['trainers', 'types']
 })
 
 module.exports = bookshelf.model('Trainers_Types', Trainers_Types)

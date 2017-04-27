@@ -3,7 +3,6 @@
 const Animal = require('../models/animalsMdl')
 
 module.exports.getAnimal = ({ params: { id } }, res, next) => {
-  console.log('id', id);
   Animal.forge({ id })
     .fetch({ withRelated: ['trick', 'type'], require: true })
     .then(animal => res.status(200).json(animal))
@@ -26,7 +25,7 @@ module.exports.addAnimal = ({ body }, res, next) => {
 module.exports.removeAnimal = ({ params: { id } }, res, next) => {
   Animal.forge({ id })
     .destroy()
-    .then(() => res.status(202).json({'msg': 'animal removed'}))
+    .then(() => res.status(202).json({ 'msg': 'animal removed' }))
     .catch(err => next(err))
 }
 
