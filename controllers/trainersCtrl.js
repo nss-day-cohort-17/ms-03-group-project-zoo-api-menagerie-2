@@ -1,6 +1,8 @@
 'use strict'
 
 const Trainer = require('../models/trainersMdl')
+const TrainerTricks = require('../models/trainersTricksMdl')
+const TrainerTypes = require('../models/trainersTypesMdl')
 
 module.exports.getTrainer = ({ params: { id } }, res, next) => {
   Trainer.forge({ id })
@@ -23,9 +25,11 @@ module.exports.addTrainer = ({ body }, res, next) => {
 }
 
 module.exports.removeTrainer = ({ params: { id } }, res, next) => {
-  Trainer.forge({ id })
-    .destroy()
-    .then(() => res.status(202).json({'msg': 'Trainer removed'}))
+  // tricks and types through the join table
+  TrainerTricks.forge().where({ trainer_id: id }).destroy()
+    .then(() => TrainerTypes.where({ trainer_id: id }).destroy())
+    .then(() => Trainer.forge({ id }).destroy())
+    .then(() => res.status(202).json({ 'msg': 'trainer removed' }))
     .catch(err => next(err))
 }
 

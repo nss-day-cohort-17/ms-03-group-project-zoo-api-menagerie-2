@@ -1,6 +1,8 @@
 'use strict'
 
 const { bookshelf } = require('../db/database');
+require('./tricksMdl')
+require('./typesMdl')
 require('./trainersTricksMdl')
 require('./trainersTypesMdl')
 
@@ -26,4 +28,4 @@ const Trainer = bookshelf.Model.extend({
   dependents: ['trick', 'type']
 })
 
-module.exports = Trainer
+module.exports = bookshelf.model('Trainer', Trainer)

@@ -26,4 +26,4 @@ const Keeper = bookshelf.Model.extend({
   dependents: ['animal']
 })
 
-module.exports = Keeper
+module.exports = bookshelf.model('Keeper', Keeper)
