@@ -22,6 +22,8 @@ const Trainer = bookshelf.Model.extend({
     .then(show => show)
     .catch(err => err)
   }
+}, {
+  dependents: ['trick', 'type']
 })
 
 module.exports = Trainer

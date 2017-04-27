@@ -13,3 +13,24 @@ module.exports.getTricks = (req, res, next) => {
   .then(Tricks => res.status(200).json(Tricks))
   .catch(err => next(err))
 }
+
+module.exports.addTrick = ({ body }, res, next) => {
+  Trick.forge(body)
+    .save()
+    .then(() => res.status(201).json({ "msg": "So we finally got a new Trick." }))
+    .catch(err => next(err))
+}
+
+module.exports.removeTrick = ({ params: { id } }, res, next) => {
+  Trick.forge({ id })
+    .destroy()
+    .then(() => res.status(202).json({'msg': 'Trick removed'}))
+    .catch(err => next(err))
+}
+
+module.exports.updateTrick = ({ body }, res, next) => {
+  Trick.forge(body)
+    .save()
+    .then(() => res.status(201).json({ "msg": "updated Trick" }))
+    .catch(err => next(err))
+}

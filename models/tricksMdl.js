@@ -24,6 +24,8 @@ const Trick = bookshelf.Model.extend({
     .then(show => show)
     .catch(err => err)
   }
+}, {
+  dependents: ['animal', 'trainer']
 })
 
 module.exports = bookshelf.model('Trick', Trick)
